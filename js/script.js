@@ -22,11 +22,12 @@ $(".card").click(function(event){
   var imageString =  $(this).css("background-image");
   var letter = imageString[imageString.length - 8];
   console.log(letter, $letter.text() );
-
-  // compare letters
-
-
+  // compare letter
   // if they match score a point and redo game
+  if(letter == $letter.text()){
+    console.log("matches")
+    $("#star1").addClass("active");
+  }
 })
 
 //Based on the letter that is randomly selected, the program should randomly select one of the three photos in the image database that correspond to that letter.
