@@ -25,7 +25,7 @@ $(".card").click(function(event){
   // compare letter
   // if they match score a point and redo game
   if(letter == $letter.text()){
-    console.log("matches")
+    console.log("matches");
     $("#star1").addClass("active");
   }
 })
