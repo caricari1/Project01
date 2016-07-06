@@ -16,6 +16,30 @@ $(".button").click(function() {
   var $card1 = $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
   var $card2 = $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
   var $card3 = $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+  var card1ImageString = $(card1).css("background-image");
+  var card1Letter = card1ImageString[card1ImageString.length -8]
+  console.log(card1ImageString, card1Letter)
+  var card2ImageString = $(card2).css("background-image");
+  var card2Letter = card2ImageString[card2ImageString.length -8]
+  console.log(card2ImageString, card2Letter)
+  var card3ImageString = $(card3).css("background-image");
+  var card3Letter = card3ImageString[card3ImageString.length -8]
+  console.log(card3ImageString, card3Letter)
+  if(card1Letter !== $letter.text()){
+    console.log("card1 does not match letter")
+  } else if (card1Letter === $letter.text()){
+    console.log("card1 matches letter")
+  }
+  if(card2Letter !== $letter.text()){
+    console.log("card2 does not match letter")
+  } else if (card2Letter === $letter.text()){
+    console.log("card2 matches letter")
+  }
+  if(card3Letter !== $letter.text()){
+    console.log("card3 does not match letter")
+  } else if (card3Letter === $letter.text()){
+    console.log("card3 matches letter")
+  }
 });
 
 $(".card").click(function(event){
@@ -36,18 +60,4 @@ $(".card").click(function(event){
   }
 });
 
-//Based on the letter that is randomly selected, the program should randomly select one of the three photos in the image database that correspond to that letter.
-
-//The program should also randomly place that photo in one of the three card positions
-
-//The other two card positions should be filled by random selection of photos that do not correspond to the letter
-
-//When the player clicks on the correct photo, a star should appear on the right and they should hear a positive-sounding beep
-
-//After the star and posiive sound, the player should be presented with a new letter and a new set of cards
-
-//When the player clicks on the wrong photo, they should hear a negative-sounding beep and the photo should disappear.
-
-//If the player clicks on the wrong photo again, the same thing should happen so that they are left with the right answer. After that, they should be presented with a new letter and a new set of cards
-
-//The game should continue until the player has collected 5 stars
+//ensure one image matches letter
