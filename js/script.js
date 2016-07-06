@@ -2,6 +2,10 @@
 
 //Clicking on the start button should also trigger the program to randomly select a letter
 
+   $(".button").click(function() {
+   $(".button").remove();
+ });
+
 //Based on the letter that is randomly selected, the program should randomly select one of the three photos in the image database that correspond to that letter.
 
 //The program should also randomly place that photo in one of the three card positions
