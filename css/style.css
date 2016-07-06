@@ -48,19 +48,17 @@ body {
 }
 
 #card1.active {
-  background-image: url('../img/b3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+
 #card2 {
-  background-image: url('../img/c1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #card3 {
-  background-image: url('../img/g1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
