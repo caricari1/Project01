@@ -27,8 +27,14 @@ $(".card").click(function(event){
   if(letter == $letter.text()){
     console.log("matches");
     $("#star1").addClass("active");
+    $letter = $("#letter").text(function( index ) {
+      return letters[Math.floor(Math.random() * letters.length)];
+    });
+    var $card1 = $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    var $card2 = $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    var $card3 = $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
   }
-})
+});
 
 //Based on the letter that is randomly selected, the program should randomly select one of the three photos in the image database that correspond to that letter.
 
