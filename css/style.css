@@ -8,6 +8,14 @@ body {
        margin-right:auto;
 }
 
+h1 {
+  font-size: 100px;
+  font-family: 'Muli', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
 .button {
     background-color: rgb(44, 185, 109);
     border: none;
@@ -22,6 +30,17 @@ body {
     transform: translate(-50%, -50%);
     font-size: 50px;
     font-family: 'Muli', sans-serif;
+}
+
+#books {
+  width: 500px;
+  height: 500px;
+  background-image: url('../img/book-25155_1280.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 
