@@ -65,10 +65,9 @@ $(".card").click(function(event){
     $('<div class="star" style="width: 150px; height: 100px; background-image: url(img/star297837_640.png);\
     background-size: contain; background-repeat: no-repeat; margin: 20px"></div>').appendTo("#stars");
     $('.card').css('background-image', 'none');
+  } else {
+    alert("Sorry. Wrong answer.")
   }
-//} else {
-    //alert("Sorry. Wrong answer.")
-  //}
 
 
   $letter = $("#letter").text(function( index ) {
