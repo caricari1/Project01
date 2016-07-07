@@ -24,6 +24,7 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
+
 #letter.active {
   width: 880px;
   border-radius: 20px;
