@@ -70,17 +70,16 @@ $(".card").click(function(event){
   var imageString =  $(this).css("background-image");
   var letter = imageString[imageString.length - 8];
   console.log(letter, $letter.text() );
-  $("#star1").addClass("active");
+  if(letter == $letter.text()){
+    alert("Good job!");
+    $("#star1").addClass("active");
+  } else {
+    alert("Sorry. Wrong answer.")
+  }
   $letter = $("#letter").text(function( index ) {
     return letters[Math.floor(Math.random() * letters.length)];
   });
   var $card1 = $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
   var $card2 = $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
   var $card3 = $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-  if(letter == $letter.text()){
-    console.log("matches");
-    $("#star1").addClass("active");
-} else {
-  alert("Sorry. Wrong answer.")
-}
 });
