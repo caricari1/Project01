@@ -26,26 +26,36 @@ $(".button").click(function() {
       randomCard.css({"background-image": 'url(img/' + imageName + ')'})
     }
   }
+  //gets random images for remaining cards that do not match letter
+      if ($('#card1').css('background-image') == 'none') {
+        console.log('Card1 does not have a background image');
+        $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      }
 
-  //gets random images for each card
-  //var $card1 = $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-  //var $card2 = $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-  //var $card3 = $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      if ($('#card2').css('background-image') == 'none') {
+        console.log('Card2 does not have a background image');
+        $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      }
+
+      if ($('#card3').css('background-image') == 'none') {
+        console.log('Card3 does not have a background image');
+        $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      }
 
   //gets letter for card1
-  var card1ImageString = $(card1).css("background-image");
-  var card1Letter = card1ImageString[card1ImageString.length -8]
-  console.log(card1ImageString, card1Letter)
+  //var card1ImageString = $(card1).css("background-image");
+  //var card1Letter = card1ImageString[card1ImageString.length -8]
+  //console.log(card1ImageString, card1Letter)
 
   //gets letter for card2
-  var card2ImageString = $(card2).css("background-image");
-  var card2Letter = card2ImageString[card2ImageString.length -8]
-  console.log(card2ImageString, card2Letter)
+  //var card2ImageString = $(card2).css("background-image");
+  //var card2Letter = card2ImageString[card2ImageString.length -8]
+  //console.log(card2ImageString, card2Letter)
 
   //gets letter for card3
-  var card3ImageString = $(card3).css("background-image");
-  var card3Letter = card3ImageString[card3ImageString.length -8]
-  console.log(card3ImageString, card3Letter)
+  //var card3ImageString = $(card3).css("background-image");
+  //var card3Letter = card3ImageString[card3ImageString.length -8]
+  //console.log(card3ImageString, card3Letter)
 
   //if no cards match letter, ensure one card that matches letter randomly replaces one of the cards
   //if((card1Letter !== $letter.text()) && (card2Letter !== $letter.text()) && (card3Letter !== $letter.text())){
@@ -60,14 +70,17 @@ $(".card").click(function(event){
   var imageString =  $(this).css("background-image");
   var letter = imageString[imageString.length - 8];
   console.log(letter, $letter.text() );
+  $("#star1").addClass("active");
+  $letter = $("#letter").text(function( index ) {
+    return letters[Math.floor(Math.random() * letters.length)];
+  });
+  var $card1 = $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+  var $card2 = $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+  var $card3 = $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
   if(letter == $letter.text()){
     console.log("matches");
     $("#star1").addClass("active");
-    $letter = $("#letter").text(function( index ) {
-      return letters[Math.floor(Math.random() * letters.length)];
-    });
-    var $card1 = $('#card1').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-    var $card2 = $('#card2').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-    var $card3 = $('#card3').css({"background-image": 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
-  }
+} else {
+  alert("Sorry. Wrong answer.")
+}
 });
