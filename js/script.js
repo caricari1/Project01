@@ -59,8 +59,9 @@ $(".card").click(function(event){
     $('<div class="star" style="width: 150px; height: 100px; background-image: url(img/star297837_640.png);\
     background-size: contain; background-repeat: no-repeat; margin: 20px"></div>').appendTo("#stars");
     $('.card').css('background-image', 'none');
-    playerWins = playerWins + 1;
-  } else {
+    //for(var i=0;i<5;i++)
+  //}
+} else {
     alert("Sorry. Wrong answer.")
   }
 
